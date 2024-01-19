@@ -1,20 +1,20 @@
-# TS Generator
+# Drupal TypeScript Generator
 
 This is a Drupal module, that generates Typescript type definitions for certain entities. It can optionally also generate cleaned up target type definitions and functions to convert objects from the initials types to the target types (parsers).
 
 ## Installation
 
 ```sh
-composer require hoppinger/ts_generator
+composer require kevinquillen/ts_generator
 ```
 
 ## Versions
 
-Version 2.0.0 is Drupal 9 compatible.
+Version 2.0.0 is Drupal 9+ compatible.
 
 ## Usage
 
-The generator runs as a Drush command that needs a configuration file. 
+The generator runs as a Drush command that needs a configuration file.
 
 Create `.yml` file with the following contents:
 
@@ -56,7 +56,7 @@ export type Result<T> = T | "error"
 export async function drupalGetEntity(alias: string): Promise<Result<ParsedInputEntity>> {
   const res = await fetch(`/${alias}?format=_json`), { method: "get", credentials: "include" })
   if (!res.ok) return "error"
-  
+
   const json = await res.json()
   if (!input_entity_guard(json)) return "error"
 

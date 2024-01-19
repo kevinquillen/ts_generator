@@ -5,7 +5,7 @@
     "type": "drupal-module",
     "license": "GPL-2.0+",
     "minimum-stability": "dev",
-    "homepage": "https://github.com/kevinquillen/ts_generator",
+    "homepage": "https://github.com/kevinquillen/typescript-generator",
     "authors": [
         {
             "name": "Kevin Quillen",

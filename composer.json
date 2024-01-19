@@ -1,22 +1,22 @@
 {
-  "name": "hoppinger/ts_generator",
-  "description": "Drupal module to generate TypeScript code based on the REST Resources",
-  "type": "drupal-module",
-  "license": "GPL-2.0+",
-  "minimum-stability": "dev",
-  "homepage": "https://github.com/hoppinger/ts_generator",
-  "authors": [
-    {
-      "name": "Rolf van de Krol",
-      "role": "Maintainer"
-    }
-  ],
-  "require": {},
+    "name": "kevinquillen/ts_generator",
+    "description": "Provides a Drush command to generate TypeScript definitions for your entity types in Drupal.",
+    "keywords": ["drupal", "typescript"],
+    "type": "drupal-module",
+    "license": "GPL-2.0+",
+    "minimum-stability": "dev",
+    "homepage": "https://github.com/kevinquillen/ts_generator",
+    "authors": [
+        {
+            "name": "Kevin Quillen",
+            "role": "Maintainer"
+        }
+    ],
     "extra": {
-    "drush": {
-      "services": {
-        "drush.services.yml": "^9"
-      }
+        "drush": {
+            "services": {
+                "drush.services.yml": "^9 || ^10"
+            }
+        }
     }
-  }
 }

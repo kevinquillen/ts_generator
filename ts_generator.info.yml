@@ -1,6 +1,6 @@
 name: TypeScript Generator
 type: module
-description: Generate TypeScript code for your entity types in Drupal.
+description: Generates TypeScript definitions for your entity types in Drupal.
 core_version_requirement: ">=9"
 dependencies:
   - rest

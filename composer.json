@@ -12,10 +12,13 @@
             "role": "Maintainer"
         }
     ],
+    "require": {
+        "drush/drush": "^12"
+    },
     "extra": {
         "drush": {
             "services": {
-                "drush.services.yml": "^9 || ^10"
+                "drush.services.yml": "^10"
             }
         }
     }

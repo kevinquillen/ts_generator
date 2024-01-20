@@ -2,30 +2,25 @@
 
 namespace Drupal\typescript_generator\Commands;
 
-use Consolidation\OutputFormatters\StructuredData\RowsOfFields;
 use Drupal\typescript_generator\Result;
 use Drupal\typescript_generator\Settings;
-use Drupal\typescript_generator\Generator;
 use Drush\Commands\DrushCommands;
+use Drush\Attributes as CLI;
 
 /**
- * A Drush commandfile.
+ * tbd
  */
 class TypeScriptGeneratorCommands extends DrushCommands {
 
   /**
-   * Generate TypeScript code for the REST Resources
-   *
-   * @param $filename
-   *   Config file
-   * @usage typescript_generator-generator foo
-   *   Usage description
-   *
-   * @command typescript_generator:generate
+   * Generate TypeScript definitions.
    */
-  public function generate($filename) {
+  #[CLI\Command(name: 'typescript_generator:generate', aliases: ['tsg'])]
+  #[CLI\Argument(name: 'filename', description: 'Path to configuration file containing instructions on what entities to generate definitions for.')]
+  #[CLI\Usage(name: 'drush typescript_generator:generate /path/to/config.yml', description: 'Generates TypeScript definitions for Drupal entities based off of the given configuration file.')]
+  public function generate(string $filename) {
     if (!file_exists($filename)) {
-      $this->logger()->error(dt('The specified file does not exist.'));
+      $this->logger()->error(dt('The specified configuration file does not exist.'));
     }
 
     $working_directory = dirname($filename);

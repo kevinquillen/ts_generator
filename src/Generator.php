@@ -16,6 +16,7 @@ class Generator implements GeneratorInterface {
         $component_generator->setGenerator($this);
       }
     }
+
     $this->component_generators = $component_generators;
   }
 

@@ -5,7 +5,7 @@ namespace Drupal\typescript_generator;
 use Drupal\Core\DependencyInjection\ContainerBuilder;
 use Drupal\Core\DependencyInjection\ServiceProviderInterface;
 
-class TypeScriptGeneratorServiceProvider implements ServiceProviderInterface {
+class TypescriptGeneratorServiceProvider implements ServiceProviderInterface {
 
   /**
    * {@inheritdoc}

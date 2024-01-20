@@ -5,7 +5,7 @@ This is a Drupal module that generates TypeScript type definitions for certain e
 ## Installation
 
 ```sh
-composer require kevinquillen/typescript_generator
+composer require drupal/typescript_generator
 ```
 
 ## Versions

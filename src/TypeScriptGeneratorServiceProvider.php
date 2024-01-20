@@ -1,11 +1,11 @@
 <?php
 
-namespace Drupal\ts_generator;
+namespace Drupal\typescript_generator;
 
 use Drupal\Core\DependencyInjection\ContainerBuilder;
 use Drupal\Core\DependencyInjection\ServiceProviderInterface;
 
-class TsGeneratorServiceProvider implements ServiceProviderInterface {
+class TypeScriptGeneratorServiceProvider implements ServiceProviderInterface {
 
   /**
    * {@inheritdoc}

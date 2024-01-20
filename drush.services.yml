@@ -1,5 +1,5 @@
 services:
-  ts_generator.commands:
-    class: \Drupal\ts_generator\Commands\TsGeneratorCommands
+  typescript_generator.commands:
+    class: \Drupal\typescript_generator\Commands\TypeScriptGeneratorCommands
     tags:
       - { name: drush.command }

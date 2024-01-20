@@ -1,5 +1,5 @@
 {
-    "name": "kevinquillen/ts_generator",
+    "name": "kevinquillen/typescript_generator",
     "description": "Provides a Drush command to generate TypeScript definitions for your entity types in Drupal.",
     "keywords": ["drupal", "typescript"],
     "type": "drupal-module",

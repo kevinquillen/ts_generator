@@ -1,0 +1,90 @@
+services:
+  typescript_generator.generator:
+    class: Drupal\typescript_generator\Generator
+    arguments: [{  }]
+  typescript_generator.component_generator.language_manager:
+    class: Drupal\typescript_generator\ComponentGenerator\Manager\LanguageManagerGenerator
+    tags:
+      - { name: typescript_generator_component }
+  typescript_generator.component_generator.entity_type_manager:
+    class: Drupal\typescript_generator\ComponentGenerator\Manager\EntityTypeManagerGenerator
+    tags:
+      - { name: typescript_generator_component }
+  typescript_generator.component_generator.entity:
+    class: Drupal\typescript_generator\ComponentGenerator\Entity\EntityGenerator
+    tags:
+      - { name: typescript_generator_component }
+    arguments: ['@entity_type.manager', '@entity_field.manager']
+  typescript_generator.component_generator.field.entity_bundle:
+    class: Drupal\typescript_generator\ComponentGenerator\Entity\EntityBundleGenerator
+    tags:
+      - { name: typescript_generator_component }
+    arguments: ['@entity_type.manager', '@entity_field.manager', '@entity_type.repository']
+  typescript_generator.component_generator.field:
+    class: Drupal\typescript_generator\ComponentGenerator\Field\FieldGenerator
+    tags:
+      - { name: typescript_generator_component }
+    arguments: ['@plugin.manager.field.field_type']
+
+  typescript_generator.component_generator.data.string:
+    class: Drupal\typescript_generator\ComponentGenerator\Data\StringGenerator
+    tags:
+      - { name: typescript_generator_component, priority: 10 }
+  typescript_generator.component_generator.data.number:
+    class: Drupal\typescript_generator\ComponentGenerator\Data\NumberGenerator
+    tags:
+      - { name: typescript_generator_component, priority: 10 }
+  typescript_generator.component_generator.data.boolean:
+    class: Drupal\typescript_generator\ComponentGenerator\Data\BooleanGenerator
+    tags:
+      - { name: typescript_generator_component, priority: 10 }
+  typescript_generator.component_generator.data.filter_format:
+    class: Drupal\typescript_generator\ComponentGenerator\Data\FilterFormatGenerator
+    tags:
+      - { name: typescript_generator_component, priority: 10 }
+    arguments: ['@entity_type.manager']
+  typescript_generator.component_generator.data.date_time:
+    class: Drupal\typescript_generator\ComponentGenerator\Data\DateTimeGenerator
+    tags:
+      - { name: typescript_generator_component, priority: 10 }
+    arguments: ['@entity_type.manager']
+  typescript_generator.component_generator.data.any:
+    class: Drupal\typescript_generator\ComponentGenerator\Data\AnyGenerator
+    tags:
+      - { name: typescript_generator_component }
+
+  typescript_generator.component_generator.field.language:
+    class: Drupal\typescript_generator\ComponentGenerator\Field\LanguageFieldGenerator
+    tags:
+      - { name: typescript_generator_component, priority: 10 }
+    arguments: ['@plugin.manager.field.field_type', '@language_manager']
+  typescript_generator.component_generator.field.timestamp:
+    class: Drupal\typescript_generator\ComponentGenerator\Field\TimestampFieldGenerator
+    tags:
+      - { name: typescript_generator_component, priority: 10 }
+    arguments: ['@plugin.manager.field.field_type']
+  typescript_generator.component_generator.field.string:
+    class: Drupal\typescript_generator\ComponentGenerator\Field\StringFieldGenerator
+    tags:
+      - { name: typescript_generator_component, priority: 10 }
+    arguments: ['@plugin.manager.field.field_type']
+  typescript_generator.component_generator.field.text:
+    class: Drupal\typescript_generator\ComponentGenerator\Field\TextFieldGenerator
+    tags:
+      - { name: typescript_generator_component, priority: 10 }
+    arguments: ['@plugin.manager.field.field_type']
+  typescript_generator.component_generator.field.file_uri:
+    class: Drupal\typescript_generator\ComponentGenerator\Field\FileUriFieldGenerator
+    tags:
+      - { name: typescript_generator_component, priority: 10 }
+    arguments: ['@plugin.manager.field.field_type']
+  typescript_generator.component_generator.field.path:
+    class: Drupal\typescript_generator\ComponentGenerator\Field\PathFieldGenerator
+    tags:
+      - { name: typescript_generator_component, priority: 10 }
+    arguments: ['@plugin.manager.field.field_type']
+  typescript_generator.component_generator.field.entity_reference:
+    class: Drupal\typescript_generator\ComponentGenerator\Field\EntityReferenceFieldGenerator
+    tags:
+      - { name: typescript_generator_component, priority: 10 }
+    arguments: ['@plugin.manager.field.field_type', '@entity_type.manager']

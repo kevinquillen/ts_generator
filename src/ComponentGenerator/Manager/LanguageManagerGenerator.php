@@ -1,13 +1,13 @@
 <?php
 
-namespace Drupal\ts_generator\ComponentGenerator\Manager;
+namespace Drupal\typescript_generator\ComponentGenerator\Manager;
 
 
 use Drupal\Core\Language\LanguageManagerInterface;
-use Drupal\ts_generator\ComponentGenerator\GeneratorBase;
-use Drupal\ts_generator\ComponentResult;
-use Drupal\ts_generator\Result;
-use Drupal\ts_generator\Settings;
+use Drupal\typescript_generator\ComponentGenerator\GeneratorBase;
+use Drupal\typescript_generator\ComponentResult;
+use Drupal\typescript_generator\Result;
+use Drupal\typescript_generator\Settings;
 
 class LanguageManagerGenerator extends GeneratorBase {
 

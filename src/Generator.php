@@ -1,12 +1,12 @@
 <?php
 
-namespace Drupal\ts_generator;
+namespace Drupal\typescript_generator;
 
 use Psr\Log\LoggerInterface;
 
 class Generator implements GeneratorInterface {
   /**
-   * @var \Drupal\ts_generator\GeneratorInterface[]
+   * @var \Drupal\typescript_generator\GeneratorInterface[]
    */
   protected $component_generators;
 

@@ -1,13 +1,13 @@
 <?php
 
-namespace Drupal\ts_generator;
+namespace Drupal\typescript_generator;
 
 interface GeneratorInterface {
   /**
    * @param $object
-   * @param \Drupal\ts_generator\Settings $settings
-   * @param \Drupal\ts_generator\Result $result
-   * @return \Drupal\ts_generator\ComponentResultInterface
+   * @param \Drupal\typescript_generator\Settings $settings
+   * @param \Drupal\typescript_generator\Result $result
+   * @return \Drupal\typescript_generator\ComponentResultInterface
    */
   public function generate($object, Settings $settings, Result $result);
 

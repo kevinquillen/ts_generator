@@ -1,16 +1,16 @@
 <?php
 
-namespace Drupal\ts_generator\ComponentGenerator\Entity;
+namespace Drupal\typescript_generator\ComponentGenerator\Entity;
 
 use Drupal\Core\Entity\EntityFieldManagerInterface;
 use Drupal\Core\Entity\EntityTypeInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
-use Drupal\ts_generator\ComponentGenerator\GeneratorBase;
-use Drupal\ts_generator\ComponentGenerator\PropertiesGenerator;
-use Drupal\ts_generator\ComponentGenerator\UnionGenerator;
-use Drupal\ts_generator\ComponentResult;
-use Drupal\ts_generator\Result;
-use Drupal\ts_generator\Settings;
+use Drupal\typescript_generator\ComponentGenerator\GeneratorBase;
+use Drupal\typescript_generator\ComponentGenerator\PropertiesGenerator;
+use Drupal\typescript_generator\ComponentGenerator\UnionGenerator;
+use Drupal\typescript_generator\ComponentResult;
+use Drupal\typescript_generator\Result;
+use Drupal\typescript_generator\Settings;
 use Symfony\Component\DependencyInjection\Container;
 
 class EntityGenerator extends GeneratorBase {

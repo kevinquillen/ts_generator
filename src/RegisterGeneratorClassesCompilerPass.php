@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\ts_generator;
+namespace Drupal\typescript_generator;
 
 use Symfony\Component\DependencyInjection\Reference;
 use Symfony\Component\DependencyInjection\ContainerBuilder;
@@ -8,10 +8,10 @@ use Symfony\Component\DependencyInjection\Compiler\CompilerPassInterface;
 
 class RegisterGeneratorClassesCompilerPass implements CompilerPassInterface {
   public function process(ContainerBuilder $container) {
-    $definition = $container->getDefinition('ts_generator.generator');
+    $definition = $container->getDefinition('typescript_generator.generator');
 
     $component_generators = [];
-    foreach ($container->findTaggedServiceIds('ts_generator_component') as $id => $attributes) {
+    foreach ($container->findTaggedServiceIds('typescript_generator_component') as $id => $attributes) {
       $priority = isset($attributes[0]['priority']) ? $attributes[0]['priority'] : 0;
       $component_generators[$priority][] = new Reference($id);
     }

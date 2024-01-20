@@ -1,27 +1,27 @@
 <?php
 
-namespace Drupal\ts_generator\Commands;
+namespace Drupal\typescript_generator\Commands;
 
 use Consolidation\OutputFormatters\StructuredData\RowsOfFields;
-use Drupal\ts_generator\Result;
-use Drupal\ts_generator\Settings;
-use Drupal\ts_generator\Generator;
+use Drupal\typescript_generator\Result;
+use Drupal\typescript_generator\Settings;
+use Drupal\typescript_generator\Generator;
 use Drush\Commands\DrushCommands;
 
 /**
  * A Drush commandfile.
  */
-class TsGeneratorCommands extends DrushCommands {
+class TypeScriptGeneratorCommands extends DrushCommands {
 
   /**
    * Generate TypeScript code for the REST Resources
    *
    * @param $filename
    *   Config file
-   * @usage ts_generator-generator foo
+   * @usage typescript_generator-generator foo
    *   Usage description
    *
-   * @command ts_generator:generate
+   * @command typescript_generator:generate
    */
   public function generate($filename) {
     if (!file_exists($filename)) {
@@ -31,8 +31,8 @@ class TsGeneratorCommands extends DrushCommands {
     $working_directory = dirname($filename);
     $settings = Settings::loadFile($filename);
 
-    /** @var \Drupal\ts_generator\GeneratorInterface $generator */
-    $generator = \Drupal::service('ts_generator.generator');
+    /** @var \Drupal\typescript_generator\GeneratorInterface $generator */
+    $generator = \Drupal::service('typescript_generator.generator');
 
     $entity_type_manager = \Drupal::entityTypeManager();
 

@@ -1,13 +1,13 @@
 <?php
 
-namespace Drupal\ts_generator\ComponentGenerator\Field;
+namespace Drupal\typescript_generator\ComponentGenerator\Field;
 
 use Drupal\Core\Config\Entity\ConfigEntityTypeInterface;
 use Drupal\Core\Entity\EntityTypeManagerInterface;
 use Drupal\Core\Field\FieldTypePluginManagerInterface;
-use Drupal\ts_generator\ComponentResult;
-use Drupal\ts_generator\Result;
-use Drupal\ts_generator\Settings;
+use Drupal\typescript_generator\ComponentResult;
+use Drupal\typescript_generator\Result;
+use Drupal\typescript_generator\Settings;
 use Symfony\Component\DependencyInjection\Container;
 
 class EntityReferenceFieldGenerator extends FieldGenerator {

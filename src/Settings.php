@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\ts_generator;
+namespace Drupal\typescript_generator;
 
 use Drupal\Component\Utility\NestedArray;
 use Symfony\Component\Yaml\Yaml;

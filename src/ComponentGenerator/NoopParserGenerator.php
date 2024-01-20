@@ -1,16 +1,16 @@
 <?php
 
-namespace Drupal\ts_generator\ComponentGenerator;
+namespace Drupal\typescript_generator\ComponentGenerator;
 
-use Drupal\ts_generator\ComponentResult;
-use Drupal\ts_generator\Result;
-use Drupal\ts_generator\Settings;
+use Drupal\typescript_generator\ComponentResult;
+use Drupal\typescript_generator\Result;
+use Drupal\typescript_generator\Settings;
 
 trait NoopParserGenerator {
   /**
-   * @param \Drupal\ts_generator\Settings $settings
-   * @param \Drupal\ts_generator\Result $result
-   * @param \Drupal\ts_generator\ComponentResultInterface $componentResult
+   * @param \Drupal\typescript_generator\Settings $settings
+   * @param \Drupal\typescript_generator\Result $result
+   * @param \Drupal\typescript_generator\ComponentResultInterface $componentResult
    * @return string
    */
   protected function generateNoopParser(Settings $settings, Result $result, ComponentResult $componentResult) {

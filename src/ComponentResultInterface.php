@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\ts_generator;
+namespace Drupal\typescript_generator;
 
 interface ComponentResultInterface {
   /**

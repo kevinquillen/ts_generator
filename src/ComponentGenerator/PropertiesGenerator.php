@@ -1,17 +1,17 @@
 <?php
 
-namespace Drupal\ts_generator\ComponentGenerator;
+namespace Drupal\typescript_generator\ComponentGenerator;
 
 use Drupal\Component\Uuid\Com;
-use Drupal\ts_generator\ComponentResult;
-use Drupal\ts_generator\Result;
-use Drupal\ts_generator\Settings;
+use Drupal\typescript_generator\ComponentResult;
+use Drupal\typescript_generator\Result;
+use Drupal\typescript_generator\Settings;
 
 trait PropertiesGenerator {
   use NoopParserGenerator;
 
   /**
-   * @param \Drupal\ts_generator\ComponentResultInterface|string[] $properties
+   * @param \Drupal\typescript_generator\ComponentResultInterface|string[] $properties
    * @param string $component
    * @return string
    */
@@ -171,8 +171,8 @@ trait PropertiesGenerator {
 
     if ($optional) {
       return '(' . $property_accessor . ' !== undefined ? ' . $properties[$_property_key]->getComponent('parser') . '(' . $property_accessor . ') : undefined)';
-    } 
-    
+    }
+
     return $properties[$_property_key]->getComponent('parser') . '(' . $property_accessor . ')';
   }
 
@@ -185,7 +185,7 @@ trait PropertiesGenerator {
   }
 
   /**
-   * @param \Drupal\ts_generator\ComponentResultInterface|string[] $properties
+   * @param \Drupal\typescript_generator\ComponentResultInterface|string[] $properties
    * @param null|string|array $mapping
    * @param string $type_name
    * @param string $target_type_name
@@ -201,7 +201,7 @@ trait PropertiesGenerator {
         return '(t: ' . $type_name . '): ' . $target_type_name . " | undefined => " . $this->generatePropertiesParserContent($properties, $mapping);
       }
     }
-    
+
     return '(t: ' . $type_name . '): ' . $target_type_name . " => " . $this->generatePropertiesParserContent($properties, $mapping);
   }
 
@@ -252,7 +252,7 @@ trait PropertiesGenerator {
   }
 
   protected function generatePropertiesGuardContent($properties, $mapping = NULL) {
-    
+
     if (!isset($mapping)) {
       $mapping = $this->getDefaultMapping($properties);
     }
@@ -293,7 +293,7 @@ trait PropertiesGenerator {
           $guard = $property->getComponent('guard');
           if ($guard) {
             $guards[] = $guard . '(t.' . $property_key . ')';
-          }          
+          }
         } else {
           $guard = $property->getComponent('guard');
           if ($guard) {
@@ -327,7 +327,7 @@ trait PropertiesGenerator {
         $target_type = $componentResult->setComponent(
           'target_type',
           $optional ? ($this->generatePropertiesTargetObject($properties, $mapping) . ' | undefined') : $this->generatePropertiesTargetObject($properties, $mapping)
-        );  
+        );
       } else {
         $target_type = $componentResult->setComponent(
           'target_type',
@@ -335,7 +335,7 @@ trait PropertiesGenerator {
             'types/' . $target_type_name,
             'type ' . $target_type_name . ' = ' . $this->generatePropertiesTargetObject($properties, $mapping)
           )
-        );  
+        );
       }
 
       $parser = $componentResult->setComponent(

@@ -1,6 +1,6 @@
 <?php
 
-namespace Drupal\ts_generator\ComponentGenerator;
+namespace Drupal\typescript_generator\ComponentGenerator;
 
 
 trait UnionGenerator {

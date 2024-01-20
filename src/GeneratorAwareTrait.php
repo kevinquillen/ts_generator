@@ -1,10 +1,10 @@
 <?php
 
-namespace Drupal\ts_generator;
+namespace Drupal\typescript_generator;
 
 trait GeneratorAwareTrait {
   /**
-   * @var \Drupal\ts_generator\GeneratorInterface
+   * @var \Drupal\typescript_generator\GeneratorInterface
    */
   protected $generator;
 

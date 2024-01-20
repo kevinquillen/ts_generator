@@ -1,10 +1,10 @@
 <?php
 
-namespace Drupal\ts_generator\ComponentGenerator\Data;
+namespace Drupal\typescript_generator\ComponentGenerator\Data;
 
-use Drupal\ts_generator\ComponentResult;
-use Drupal\ts_generator\Result;
-use Drupal\ts_generator\Settings;
+use Drupal\typescript_generator\ComponentResult;
+use Drupal\typescript_generator\Result;
+use Drupal\typescript_generator\Settings;
 
 class NumberGenerator extends DataGeneratorBase {
   protected $supportedDataType = ['integer'];

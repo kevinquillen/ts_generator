@@ -3,5 +3,5 @@ type: module
 description: Adds support for generating TypeScript definitions for Metatag.
 core_version_requirement: ">=9"
 dependencies:
-  - ts_generator:ts_generator
+  - typescript_generator:typescript_generator
   - metatag:metatag

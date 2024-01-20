@@ -1,0 +1,11 @@
+services:
+  typescript_generator_metatag.component_generator.field.metatag_base:
+    class: Drupal\typescript_generator_metatag\ComponentGenerator\MetatagBaseFieldGenerator
+    tags:
+      - { name: typescript_generator_component, priority: 10 }
+    arguments: ['@plugin.manager.metatag.tag']
+  typescript_generator_metatag.component_generator.field.metatag:
+    class: Drupal\typescript_generator_metatag\ComponentGenerator\MetatagFieldGenerator
+    tags:
+      - { name: typescript_generator_component, priority: 10 }
+    arguments: ['@plugin.manager.field.field_type', '@plugin.manager.metatag.tag']

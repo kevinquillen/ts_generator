@@ -1,13 +1,13 @@
 <?php
 
-namespace Drupal\ts_generator\ComponentGenerator\Manager;
+namespace Drupal\typescript_generator\ComponentGenerator\Manager;
 
 use Drupal\Core\Entity\EntityTypeManagerInterface;
-use Drupal\ts_generator\ComponentGenerator\GeneratorBase;
-use Drupal\ts_generator\ComponentGenerator\UnionGenerator;
-use Drupal\ts_generator\ComponentResult;
-use Drupal\ts_generator\Result;
-use Drupal\ts_generator\Settings;
+use Drupal\typescript_generator\ComponentGenerator\GeneratorBase;
+use Drupal\typescript_generator\ComponentGenerator\UnionGenerator;
+use Drupal\typescript_generator\ComponentResult;
+use Drupal\typescript_generator\Result;
+use Drupal\typescript_generator\Settings;
 
 class EntityTypeManagerGenerator extends GeneratorBase {
   use UnionGenerator;
@@ -25,7 +25,7 @@ class EntityTypeManagerGenerator extends GeneratorBase {
   protected function generateType($object, Settings $settings, Result $result, ComponentResult $componentResult) {
     /** @var \Drupal\Core\Entity\EntityTypeManagerInterface $object */
 
-    /** @var \Drupal\ts_generator\ComponentResult[] $entities */
+    /** @var \Drupal\typescript_generator\ComponentResult[] $entities */
     $entities = $result->getContext('entities');
 
     $input_entities = [];
@@ -44,7 +44,7 @@ class EntityTypeManagerGenerator extends GeneratorBase {
   protected function generateTargetType($object, Settings $settings, Result $result, ComponentResult $componentResult) {
     /** @var \Drupal\Core\Entity\EntityTypeManagerInterface $object */
 
-    /** @var \Drupal\ts_generator\ComponentResult[] $entities */
+    /** @var \Drupal\typescript_generator\ComponentResult[] $entities */
     $entities = $result->getContext('entities');
 
     $input_entities = [];

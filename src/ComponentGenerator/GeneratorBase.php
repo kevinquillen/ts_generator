@@ -1,31 +1,31 @@
 <?php
 
-namespace Drupal\ts_generator\ComponentGenerator;
+namespace Drupal\typescript_generator\ComponentGenerator;
 
-use Drupal\ts_generator\ComponentResult;
-use Drupal\ts_generator\GeneratorAwareInterface;
-use Drupal\ts_generator\GeneratorAwareTrait;
-use Drupal\ts_generator\GeneratorInterface;
-use Drupal\ts_generator\Result;
-use Drupal\ts_generator\Settings;
+use Drupal\typescript_generator\ComponentResult;
+use Drupal\typescript_generator\GeneratorAwareInterface;
+use Drupal\typescript_generator\GeneratorAwareTrait;
+use Drupal\typescript_generator\GeneratorInterface;
+use Drupal\typescript_generator\Result;
+use Drupal\typescript_generator\Settings;
 
 abstract class GeneratorBase implements GeneratorInterface, GeneratorAwareInterface {
   use GeneratorAwareTrait, NoopParserGenerator;
 
   /**
    * @param $object
-   * @param \Drupal\ts_generator\Settings $settings
-   * @param \Drupal\ts_generator\Result $result
-   * @param \Drupal\ts_generator\ComponentResultInterface $componentResult
+   * @param \Drupal\typescript_generator\Settings $settings
+   * @param \Drupal\typescript_generator\Result $result
+   * @param \Drupal\typescript_generator\ComponentResultInterface $componentResult
    * @return string
    */
   abstract protected function generateType($object, Settings $settings, Result $result, ComponentResult $componentResult);
 
   /**
    * @param $object
-   * @param \Drupal\ts_generator\Settings $settings
-   * @param \Drupal\ts_generator\Result $result
-   * @param \Drupal\ts_generator\ComponentResultInterface $componentResult
+   * @param \Drupal\typescript_generator\Settings $settings
+   * @param \Drupal\typescript_generator\Result $result
+   * @param \Drupal\typescript_generator\ComponentResultInterface $componentResult
    * @return string
    */
   protected function generateTargetType($object, Settings $settings, Result $result, ComponentResult $componentResult) {
@@ -34,9 +34,9 @@ abstract class GeneratorBase implements GeneratorInterface, GeneratorAwareInterf
 
   /**
    * @param $object
-   * @param \Drupal\ts_generator\Settings $settings
-   * @param \Drupal\ts_generator\Result $result
-   * @param \Drupal\ts_generator\ComponentResultInterface $componentResult
+   * @param \Drupal\typescript_generator\Settings $settings
+   * @param \Drupal\typescript_generator\Result $result
+   * @param \Drupal\typescript_generator\ComponentResultInterface $componentResult
    * @return string
    */
   protected function generateParser($object, Settings $settings, Result $result, ComponentResult $componentResult) {
@@ -60,9 +60,9 @@ abstract class GeneratorBase implements GeneratorInterface, GeneratorAwareInterf
 
   /**
    * @param $object
-   * @param \Drupal\ts_generator\Settings $settings
-   * @param \Drupal\ts_generator\Result $result
-   * @return \Drupal\ts_generator\ComponentResultInterface
+   * @param \Drupal\typescript_generator\Settings $settings
+   * @param \Drupal\typescript_generator\Result $result
+   * @return \Drupal\typescript_generator\ComponentResultInterface
    */
   public function generate($object, Settings $settings, Result $result) {
     $componentResult = new ComponentResult();

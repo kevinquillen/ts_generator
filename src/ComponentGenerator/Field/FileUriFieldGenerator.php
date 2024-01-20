@@ -1,10 +1,10 @@
 <?php
 
-namespace Drupal\ts_generator\ComponentGenerator\Field;
+namespace Drupal\typescript_generator\ComponentGenerator\Field;
 
-use Drupal\ts_generator\ComponentResult;
-use Drupal\ts_generator\Result;
-use Drupal\ts_generator\Settings;
+use Drupal\typescript_generator\ComponentResult;
+use Drupal\typescript_generator\Result;
+use Drupal\typescript_generator\Settings;
 
 class FileUriFieldGenerator extends FieldGenerator {
   protected $supportedFieldType = ['file_uri'];

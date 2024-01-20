@@ -2,13 +2,14 @@
 
 namespace Drupal\typescript_generator\Commands;
 
+use Drupal\typescript_generator\Exception\MissingGeneratorException;
 use Drupal\typescript_generator\Result;
 use Drupal\typescript_generator\Settings;
 use Drush\Commands\DrushCommands;
 use Drush\Attributes as CLI;
 
 /**
- * tbd
+ * Provides Drush commands for the TypeScript generator module.
  */
 class TypeScriptGeneratorCommands extends DrushCommands {
 
@@ -32,9 +33,13 @@ class TypeScriptGeneratorCommands extends DrushCommands {
     $entity_type_manager = \Drupal::entityTypeManager();
 
     $result = new Result();
-    $generator->generate($entity_type_manager, $settings, $result);
 
-    $target_directory = $working_directory . '/' . $settings->get('target_directory');
-    $result->write($target_directory);
+    try {
+      $generator->generate($entity_type_manager, $settings, $result);
+      $target_directory = $working_directory . '/' . $settings->get('target_directory');
+      $result->write($target_directory);
+    } catch (MissingGeneratorException|\Exception $e) {
+      // Output the issue
+    }
   }
 }

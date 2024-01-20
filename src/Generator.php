@@ -2,7 +2,7 @@
 
 namespace Drupal\typescript_generator;
 
-use Psr\Log\LoggerInterface;
+use Drupal\typescript_generator\Exception\MissingGeneratorException;
 
 class Generator implements GeneratorInterface {
   /**
@@ -25,7 +25,7 @@ class Generator implements GeneratorInterface {
       return $generator->generate($object, $settings, $result);
     }
 
-    throw new \Exception("No supported Generator for " . var_export($object, TRUE));
+    throw new MissingGeneratorException("No supported TypeScript Generator for (object name). Check that this Drupal type is supported and or service definitions are tagged correctly to pick up an extended type.");
   }
 
   public function supportsGeneration($object) {

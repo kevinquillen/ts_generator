@@ -10,7 +10,7 @@ composer require drupal/typescript_generator
 
 ## Versions
 
-Version 3.0.0 is Drupal 10.1+ / Drush 12 compatible only.
+Version 3 is Drupal 10.1+ / Drush 12 compatible only.
 
 ## Usage
 

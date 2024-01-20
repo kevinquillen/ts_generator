@@ -1,6 +1,6 @@
 # Drupal TypeScript Generator
 
-This is a Drupal module that generates TypeScript type definitions for certain entities. It can optionally also generate cleaned up target type definitions and functions to convert objects from the initials types to the target types (parsers).
+This module generates TypeScript type definitions for specified entities. It can optionally also generate cleaned up target type definitions and functions to convert objects from the initials types to the target types (parsers).
 
 ## Installation
 

@@ -32,7 +32,7 @@ This file instructs the generator to generate the files in a directory `definiti
 Trigger the generation using
 
 ```
-drush typescript_generator:generate [PATH TO CONFIGURATION FILE]
+drush typescript_generator:generate [PATH TO CONFIGURATION FILE]/config.yml
 ```
 
 ## Todo
